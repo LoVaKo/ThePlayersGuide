@@ -1,7 +1,7 @@
 package TPG8;
 
+import java.awt.*;
 import java.util.Scanner;
-import java.awt.Toolkit;
 
 public class MagicBarrier {
 

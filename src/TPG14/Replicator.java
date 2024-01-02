@@ -2,6 +2,7 @@ package TPG14;
 
 import java.util.Arrays;
 import java.util.Scanner;
+
 public class Replicator {
 
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class Replicator {
 
         System.out.println("Provide 5 integer numbers for the original array");
         for (int i = 0; i < 5; i++) {
-            if(scanner.hasNextInt()) {
+            if (scanner.hasNextInt()) {
                 array1[i] = scanner.nextInt();
             } else {
                 System.out.println("Invalid input. Please provide integer numbers.");

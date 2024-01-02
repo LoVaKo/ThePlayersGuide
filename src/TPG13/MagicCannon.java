@@ -7,7 +7,7 @@ public class MagicCannon {
             boolean isDivisibleBy3 = numCranks % 3 == 0;
             boolean isDivisibleBy5 = numCranks % 5 == 0;
 
-            if (!isDivisibleBy3 && !isDivisibleBy5){
+            if (!isDivisibleBy3 && !isDivisibleBy5) {
                 System.out.println(numCranks + ": Normal");
             } else if (isDivisibleBy3 && !isDivisibleBy5) {
                 System.out.println(numCranks + ": \u001b[31mFire\u001b[0m");

@@ -1,6 +1,7 @@
 package TPG12;
 
 import java.util.Scanner;
+
 public class Prototype {
 
     public static void main(String[] args) {
@@ -12,8 +13,7 @@ public class Prototype {
             System.out.println("User 1, enter a number between 0 and 100:");
             if (scanner.hasNextInt()) {
                 targetNumber = scanner.nextInt();
-            }
-            else {
+            } else {
                 System.out.println("Invalid input. Please enter a number between 0 and 100.");
                 scanner.next();
             }
@@ -29,7 +29,7 @@ public class Prototype {
         // Guessing the number
         boolean gameOver = false;
 
-        while (!gameOver){
+        while (!gameOver) {
             System.out.println("What is your next guess?");
             if (scanner.hasNextInt()) {
                 int guess = scanner.nextInt();
@@ -42,8 +42,7 @@ public class Prototype {
                     System.out.println("You guessed the number!");
                     gameOver = true;
                 }
-            }
-            else {
+            } else {
                 System.out.println("Invalid input. Please enter a number.");
                 scanner.next();
             }
