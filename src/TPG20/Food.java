@@ -6,11 +6,13 @@ public class Food {
     FoodType foodType;
     MainIngredient mainIngredient;
     Seasoning seasoning;
+
     public Food(FoodType foodType, MainIngredient mainIngredient, Seasoning seasoning) {
         this.foodType = foodType;
         this.mainIngredient = mainIngredient;
         this.seasoning = seasoning;
     }
+
     public static Food makeFood(String foodType, String mainIngredient, String seasoning) {
         FoodType convertedType = findEnum(foodType, FoodType.class);
         MainIngredient convertedMain = findEnum(mainIngredient, MainIngredient.class);

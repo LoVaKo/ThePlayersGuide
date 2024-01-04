@@ -1,11 +1,13 @@
 package TPG19;
+
 import java.util.Scanner;
+
 public class Chest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ChestState lock = ChestState.LOCKED;
 
-        while(true) {
+        while (true) {
             System.out.println("The chest is " + lock.toString().toLowerCase() + ". What do you want to do?");
             String command = scanner.nextLine().toLowerCase();
             switch (command) {

@@ -13,6 +13,26 @@ public class Card {
         this.rank = rank;
     }
 
+    public static void createDeck() {
+        // Creating a full deck
+        List<Card> deck = new ArrayList<>();
+
+        for (CardColor color : CardColor.values()) {
+            for (CardRank rank : CardRank.values()) {
+                deck.add(new Card(color, rank));
+            }
+        }
+
+        // Printing deck
+        for (Card card : deck) {
+            System.out.println(card);
+        }
+    }
+
+    public static void main(String[] args) {
+        createDeck();
+    }
+
     //toString override
     @Override
     public String toString() {
@@ -20,30 +40,11 @@ public class Card {
     }
 
     //Other methods
-    public boolean isSymbolCard(){
+    public boolean isSymbolCard() {
         return rank.ordinal() > CardRank.TEN.ordinal();
     }
-    public boolean isNumberCard(){
+
+    public boolean isNumberCard() {
         return rank.ordinal() <= CardRank.TEN.ordinal();
-    }
-
-    public static void createDeck() {
-        // Creating a full deck
-        List<Card> deck = new ArrayList<>();
-
-        for(CardColor color : CardColor.values()) {
-            for(CardRank rank : CardRank.values()) {
-                deck.add(new Card(color, rank));
-            }
-        }
-
-        // Printing deck
-        for(Card card: deck) {
-            System.out.println(card);
-        }
-    }
-
-    public static void main(String[] args) {
-        createDeck();
     }
 }

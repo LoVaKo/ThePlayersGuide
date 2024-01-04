@@ -3,12 +3,11 @@ package TPG34;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Robot implements RobotCommand{
+public class Robot implements RobotCommand {
+    private final ArrayList<RobotCommand> commands = new ArrayList<>();
     private int x;
     private int y;
     private boolean isPowered;
-    private final ArrayList<RobotCommand> commands = new ArrayList<>();
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,7 @@
 package TPG27;
 
 import java.util.Scanner;
+
 public class PasswordValidator {
     public static boolean validatePassword(String password) {
         // Password length must be between 6 and 13 characters
@@ -34,7 +35,7 @@ public class PasswordValidator {
                     - Passwords must be at least 6 letters long and no more than 13 letters long.
                     - Passwords must contain at least one uppercase letter, one lowercase letter, and one number
                     - Passwords cannot contain a capital T or an ampersand (&)
-                    
+                                        
                       Please enter your password.""");
             password = scanner.nextLine();
             if (validatePassword(password)) {

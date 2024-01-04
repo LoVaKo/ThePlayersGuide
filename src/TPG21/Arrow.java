@@ -1,35 +1,17 @@
 package TPG21;
 
 import java.util.Scanner;
+
 public class Arrow {
+    private static final Scanner scanner = new Scanner(System.in);
     private final Arrowhead arrowhead;
     private final Fletching fletching;
     private final int length;
-    private static final Scanner scanner = new Scanner(System.in);
 
     public Arrow(Arrowhead arrowhead, Fletching fletching, int length) {
         this.arrowhead = arrowhead;
         this.fletching = fletching;
         this.length = length;
-    }
-
-    public float getCost() {
-        float totalCost = 0;
-
-        // Cost of arrowhead
-        if (arrowhead == Arrowhead.STEEL) totalCost += 10;
-        else if (arrowhead == Arrowhead.WOOD) totalCost += 3;
-        else totalCost += 5;
-
-        // Cost of fletching
-        if (fletching == Fletching.PLASTIC) totalCost += 10;
-        else if (fletching == Fletching.TURKEY) totalCost += 5;
-        else totalCost += 3;
-
-        // Cost of length
-        totalCost += (float) (0.05 * length);
-
-        return totalCost;
     }
 
     public static Arrow createEliteArrow() {
@@ -96,7 +78,6 @@ public class Arrow {
         return new Arrow(arrowhead, fletching, arrowLength);
     }
 
-
     public static void main(String[] args) {
         Arrow newArrow = null;
 
@@ -106,10 +87,10 @@ public class Arrow {
         switch (answer.toLowerCase()) {
             case "yes":
                 System.out.println("""
-                    Please pick one of the following arrows by entering the number:
-                    1. The Elite arrow
-                    2. The Beginner arrow
-                    3. The Marksman arrow""");
+                        Please pick one of the following arrows by entering the number:
+                        1. The Elite arrow
+                        2. The Beginner arrow
+                        3. The Marksman arrow""");
 
                 int number = scanner.nextInt();
                 scanner.nextLine();
@@ -140,5 +121,24 @@ public class Arrow {
 
         double costOfArrow = newArrow.getCost();
         System.out.println("The price of this arrow is: " + costOfArrow);
+    }
+
+    public float getCost() {
+        float totalCost = 0;
+
+        // Cost of arrowhead
+        if (arrowhead == Arrowhead.STEEL) totalCost += 10;
+        else if (arrowhead == Arrowhead.WOOD) totalCost += 3;
+        else totalCost += 5;
+
+        // Cost of fletching
+        if (fletching == Fletching.PLASTIC) totalCost += 10;
+        else if (fletching == Fletching.TURKEY) totalCost += 5;
+        else totalCost += 3;
+
+        // Cost of length
+        totalCost += (float) (0.05 * length);
+
+        return totalCost;
     }
 }
