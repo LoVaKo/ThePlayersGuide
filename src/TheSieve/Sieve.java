@@ -11,16 +11,14 @@ public class Sieve {
         this.filter = filter;
     }
 
-    // Methods
-    public boolean isGood(int number) {
-        return filter.test(number);
-    }
     public static boolean isEven(int number) {
         return number % 2 == 0;
     }
+
     public static boolean isPositive(int number) {
         return number >= 0;
     }
+
     public static boolean isMultipleOfTen(int number) {
         return number % 10 == 0;
     }
@@ -32,10 +30,10 @@ public class Sieve {
         int userInput = 0;
         while (userInput < 1 || userInput > 3) {
             System.out.println("""
-                Pick a filter:
-                1. is the number even?
-                2. is the number positive?
-                3. is the number a multiple of 10?""");
+                    Pick a filter:
+                    1. is the number even?
+                    2. is the number positive?
+                    3. is the number a multiple of 10?""");
             if (scanner.hasNextInt()) {
                 userInput = scanner.nextInt();
                 if (userInput < 1 || userInput > 3) {
@@ -62,7 +60,7 @@ public class Sieve {
 
             // Defining number
             int pickedNumber = 0;
-            while(pickedNumber == 0) {
+            while (pickedNumber == 0) {
                 System.out.print("Please enter a number: ");
 
                 if (scanner.hasNextInt()) {
@@ -86,6 +84,11 @@ public class Sieve {
         }
 
 
+    }
+
+    // Methods
+    public boolean isGood(int number) {
+        return filter.test(number);
     }
 
 }

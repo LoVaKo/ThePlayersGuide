@@ -13,6 +13,7 @@ public class Color {
     private final int red;
     private final int green;
     private final int blue;
+
     //Constructor
     public Color(int red, int green, int blue) {
         this.red = Math.min(Math.max(red, 0), 255);

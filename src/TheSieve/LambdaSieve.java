@@ -10,9 +10,6 @@ public class LambdaSieve {
     public LambdaSieve(Predicate<Integer> filter) {
         this.filter = filter;
     }
-    public boolean isGood(int number) {
-        return filter.test(number);
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,10 +18,10 @@ public class LambdaSieve {
         int userInput = 0;
         while (userInput < 1 || userInput > 3) {
             System.out.println("""
-                Pick a filter:
-                1. is the number even?
-                2. is the number positive?
-                3. is the number a multiple of 10?""");
+                    Pick a filter:
+                    1. is the number even?
+                    2. is the number positive?
+                    3. is the number a multiple of 10?""");
             if (scanner.hasNextInt()) {
                 userInput = scanner.nextInt();
                 if (userInput < 1 || userInput > 3) {
@@ -50,7 +47,7 @@ public class LambdaSieve {
 
             // Defining number
             int pickedNumber = 0;
-            while(pickedNumber == 0) {
+            while (pickedNumber == 0) {
                 System.out.print("Please enter a number: ");
 
                 if (scanner.hasNextInt()) {
@@ -72,6 +69,10 @@ public class LambdaSieve {
         }
 
 
+    }
+
+    public boolean isGood(int number) {
+        return filter.test(number);
     }
 
 }
